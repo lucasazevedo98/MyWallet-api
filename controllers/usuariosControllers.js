@@ -3,6 +3,7 @@ import bcrypt from "bcrypt"
 import { signupShema, signinShema } from "../schemas/usuariosSchema.js"
 import jwt from "jsonwebtoken"
 
+
 export async function signup(req, res) {
     const { name, email, password } = req.body
 

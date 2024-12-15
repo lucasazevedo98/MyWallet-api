@@ -2,6 +2,7 @@ import express,{json} from "express"
 import  dotenv from "dotenv"
 import { conexaoDB } from "./config/db.js"
 import usuariosRotas from "./routes/usuariosRotas.js"
+import transacaoRotas from "./routes/transacaoRotas.js"
 
 dotenv.config()
 
@@ -14,6 +15,8 @@ conexaoDB()
 
 
 app.use(usuariosRotas)
+
+app.use(transacaoRotas)
 
 
 
